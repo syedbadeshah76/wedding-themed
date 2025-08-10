@@ -4,7 +4,7 @@ import OvalImage from "@/components/hero/OvalImage";
 import groomImg from "@/assets/groom-portrait.jpg";
 import coupleImg from "@/assets/couple-embrace.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
-
+import CountdownBanner from "@/components/sections/CountdownBanner";
 const Nav = () => (
   <header className="w-full border-b border-border">
     <div className="container flex items-center justify-between py-6">
@@ -99,6 +99,9 @@ const Index = () => {
             </svg>
           </div>
         </section>
+
+        {/* Countdown Banner Section */}
+        <CountdownBanner />
       </main>
     </div>
   );
