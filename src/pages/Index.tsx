@@ -64,19 +64,19 @@ const Index = () => {
         <h1 className="sr-only">Elegant Wedding Portfolio Hero</h1>
 
         <section className="container py-12 md:py-20">
-          <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-3 md:gap-12">
+          <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-3 md:gap-12">
             {/* Left: Groom */}
             <article className="flex flex-col items-center text-center">
-              <div className="w-56 md:w-64">
+              <h2 className="mb-3 font-script text-[26px] leading-none text-primary">Albert Flores</h2>
+              <Socials />
+              <div className="mt-4 w-56 md:w-64">
                 <TeardropImage src={groomImg} alt="Groom portrait" className="w-full h-auto" />
               </div>
-              <h2 className="mt-6 font-script text-[26px] leading-none text-primary">Albert Flores</h2>
-              <Socials />
             </article>
 
             {/* Center: Couple with oval and double outline */}
             <article className="flex flex-col items-center">
-              <div className="w-[22rem] md:w-[28rem]">
+              <div className="w-[24rem] md:w-[32rem]">
                 <OvalImage src={coupleImg} alt="Bride and groom embracing" className="w-full h-auto" />
               </div>
             </article>

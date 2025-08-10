@@ -35,13 +35,22 @@ const TeardropImage: React.FC<Props> = ({ src, alt, className }) => {
         <title>{alt}</title>
       </image>
 
-      {/* Border outline matching the clip path (using same normalized path but scaled) */}
+      {/* Double border outline matching the clip path (using same path) */}
       <path
         d="M256,0 C399,0 512,147 512,288 C512,405 420,478 350,536 C309,569 276,592 256,592 C236,592 203,569 162,536 C92,478 0,405 0,288 C0,147 113,0 256,0 Z"
         fill="none"
         stroke="hsl(var(--border))"
         strokeWidth="2"
+        opacity="0.9"
         transform="translate(0,24)"
+      />
+      <path
+        d="M256,0 C399,0 512,147 512,288 C512,405 420,478 350,536 C309,569 276,592 256,592 C236,592 203,569 162,536 C92,478 0,405 0,288 C0,147 113,0 256,0 Z"
+        fill="none"
+        stroke="hsl(var(--border))"
+        strokeWidth="2"
+        opacity="0.6"
+        transform="translate(14,36)"
       />
     </svg>
   );
