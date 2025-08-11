@@ -7,6 +7,7 @@ import brideImg from "@/assets/bride-portrait.jpg";
 import CountdownBanner from "@/components/sections/CountdownBanner";
 import StoryTimeline from "@/components/sections/StoryTimeline";
 import WhenWhere from "@/components/sections/WhenWhere";
+import LatestNews from "@/components/sections/LatestNews";
 const Nav = () => (
   <header className="w-full border-b border-border">
     <div className="container flex items-center justify-between py-6">
@@ -108,6 +109,8 @@ const Index = () => {
         <StoryTimeline />
         {/* When & Where Section */}
         <WhenWhere />
+        {/* From Our Latest News Section */}
+        <LatestNews />
       </main>
     </div>
   );
