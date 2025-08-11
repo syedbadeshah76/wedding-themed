@@ -5,6 +5,7 @@ import groomImg from "@/assets/groom-portrait.jpg";
 import coupleImg from "@/assets/couple-embrace.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
 import CountdownBanner from "@/components/sections/CountdownBanner";
+import StoryTimeline from "@/components/sections/StoryTimeline";
 const Nav = () => (
   <header className="w-full border-b border-border">
     <div className="container flex items-center justify-between py-6">
@@ -102,6 +103,8 @@ const Index = () => {
 
         {/* Countdown Banner Section */}
         <CountdownBanner />
+        {/* Our Story Timeline Section */}
+        <StoryTimeline />
       </main>
     </div>
   );
