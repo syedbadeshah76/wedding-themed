@@ -8,6 +8,7 @@ import CountdownBanner from "@/components/sections/CountdownBanner";
 import StoryTimeline from "@/components/sections/StoryTimeline";
 import WhenWhere from "@/components/sections/WhenWhere";
 import LatestNews from "@/components/sections/LatestNews";
+import BlessingQuote from "@/components/sections/BlessingQuote";
 const Nav = () => (
   <header className="w-full border-b border-border">
     <div className="container flex items-center justify-between py-6">
@@ -111,6 +112,8 @@ const Index = () => {
         <WhenWhere />
         {/* From Our Latest News Section */}
         <LatestNews />
+        {/* Blessing Quote Section */}
+        <BlessingQuote />
       </main>
     </div>
   );
