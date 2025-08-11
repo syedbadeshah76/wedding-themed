@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import ringImg from "@/assets/when-where-ring.jpg";
+import coupleImg from "@/assets/couple-embrace.jpg";
 
 interface EventItem {
   key: "reception" | "dinner";
@@ -29,6 +30,11 @@ const EVENTS: EventItem[] = [
   },
 ];
 
+const EVENT_MEDIA: Record<EventItem['key'], { src: string; alt: string }> = {
+  reception: { src: ringImg, alt: "Bride’s hand with wedding ring holding white orchids" },
+  dinner: { src: coupleImg, alt: "Bride and groom embracing" },
+};
+
 const ArrowButton = ({
   direction,
   onClick,
@@ -45,7 +51,7 @@ const ArrowButton = ({
     onClick={onClick}
     aria-label={ariaLabel}
     className={cn(
-      "inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background/60 text-foreground shadow-sm backdrop-blur transition-colors hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+      "inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background/60 text-foreground shadow-sm backdrop-blur transition-colors hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hover-scale",
       className
     )}
   >
@@ -68,6 +74,7 @@ const FloralDivider = () => (
 const WhenWhere: React.FC = () => {
   const [index, setIndex] = React.useState(0);
   const event = EVENTS[index];
+  const media = EVENT_MEDIA[event.key];
 
   const scrollPrev = React.useCallback(() => setIndex((i) => (i - 1 + EVENTS.length) % EVENTS.length), []);
   const scrollNext = React.useCallback(() => setIndex((i) => (i + 1) % EVENTS.length), []);
@@ -108,17 +115,18 @@ const WhenWhere: React.FC = () => {
           {/* Left: Image */}
           <div className="relative h-56 w-full md:h-[420px]">
             <img
-              src={ringImg}
-              alt="Bride’s hand with wedding ring resting on white orchids"
+              key={event.key}
+              src={media.src}
+              alt={media.alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover animate-[fade-in_0.5s_ease-out]"
             />
           </div>
 
           {/* Right: Card */}
           <div className="p-4 md:p-0 md:flex md:items-center">
             <Card className="mx-auto w-full max-w-[520px] rounded-xl border-border bg-card/95 p-6 shadow-sm md:mr-6 md:p-8">
-              <div key={event.key} className="animate-[fade-in_0.5s_ease-out]" aria-live="polite">
+              <div key={event.key} className="animate-enter" aria-live="polite">
                 <h3 className="font-display text-xl text-foreground md:text-2xl">{event.title}</h3>
                 <span className="mt-2 block h-0.5 w-12 rounded-full bg-accent" />
 
