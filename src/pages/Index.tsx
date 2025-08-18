@@ -10,42 +10,53 @@ import WhenWhere from "@/components/sections/WhenWhere";
 import LatestNews from "@/components/sections/LatestNews";
 import BlessingQuote from "@/components/sections/BlessingQuote";
 const Nav = () => (
-  <header className="w-full border-b border-border">
-    <div className="container flex items-center justify-between py-6">
-      <a href="/" className="flex items-center gap-2">
-        <Heart size={18} className="text-accent" aria-hidden />
-        <span className="font-display text-xl tracking-wide">iloveu</span>
-      </a>
-
-      <nav aria-label="Main navigation" className="hidden md:block">
-        <ul className="flex items-center gap-8 font-display uppercase text-sm tracking-[0.2em]">
-          {[
-            "Home",
-            "Pages",
-            "Portfolio",
-            "Blog",
-            "Shop",
-            "Contact",
-          ].map((item) => (
-            <li key={item}>
-              <a href="#" className="hover:text-primary transition-colors">
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <div className="flex items-center gap-5">
-        <div className="relative">
-          <ShoppingCart aria-label="Cart" size={20} />
-          <span className="absolute -top-2 -right-2 grid h-4 w-4 place-items-center rounded-full bg-accent text-[10px] text-accent-foreground">
-            2
-          </span>
+  <header className="w-full relative overflow-hidden py-8 md:py-12">
+    {/* Decorative background pattern */}
+    <div className="absolute inset-0 opacity-5">
+      <svg width="100%" height="100%" viewBox="0 0 800 200" fill="none" className="w-full h-full">
+        <path d="M0 100 Q200 50 400 100 T800 100" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" opacity="0.3"/>
+        <path d="M0 120 Q200 70 400 120 T800 120" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" opacity="0.2"/>
+      </svg>
+    </div>
+    
+    <div className="container relative z-10">
+      <div className="text-center">
+        {/* Decorative hearts */}
+        <div className="flex items-center justify-center gap-4 mb-4">
+          <Heart size={16} className="text-accent animate-pulse" fill="hsl(var(--accent))" />
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none" className="text-accent">
+            <path d="M5 10 Q12 5 20 10 Q28 5 35 10" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+            <circle cx="20" cy="10" r="2" fill="currentColor" opacity="0.6"/>
+          </svg>
+          <Heart size={16} className="text-accent animate-pulse" fill="hsl(var(--accent))" />
         </div>
-        <button aria-label="Search">
-          <Search size={20} />
-        </button>
+
+        {/* Main heading with bismillah */}
+        <div className="space-y-2">
+          <h1 className="font-script text-3xl md:text-5xl text-primary leading-relaxed">
+            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+          </h1>
+          <p className="font-display text-sm md:text-base text-muted-foreground tracking-[0.2em] uppercase">
+            Wedding Ceremony
+          </p>
+        </div>
+
+        {/* Decorative flourish */}
+        <div className="mt-6 flex justify-center">
+          <svg width="200" height="40" viewBox="0 0 200 40" fill="none" className="text-accent">
+            {/* Main curve */}
+            <path d="M10 20 Q50 10 100 20 Q150 10 190 20" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+            {/* Center ornament */}
+            <circle cx="100" cy="20" r="3" fill="currentColor" opacity="0.8"/>
+            <path d="M100 17 L103 20 L100 23 L97 20 Z" fill="currentColor" opacity="0.6"/>
+            {/* Side flourishes */}
+            <path d="M20 20 Q30 15 40 20 Q30 25 20 20" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7"/>
+            <path d="M160 20 Q170 15 180 20 Q170 25 160 20" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.7"/>
+            {/* Small hearts */}
+            <path d="M15 18 Q17 16 19 18 Q17 20 15 18" fill="currentColor" opacity="0.5"/>
+            <path d="M181 18 Q183 16 185 18 Q183 20 181 18" fill="currentColor" opacity="0.5"/>
+          </svg>
+        </div>
       </div>
     </div>
   </header>
