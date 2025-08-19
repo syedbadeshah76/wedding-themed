@@ -82,8 +82,9 @@ const Index = () => {
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-3 md:gap-12">
             {/* Left: Groom */}
             <article className="flex flex-col items-center text-center">
-              <h2 className="mb-3 font-script text-[26px] leading-none text-primary">Albert Flores</h2>
-              <Socials />
+              <h2 className="mb-2 font-script text-[26px] leading-none text-primary">Albert Flores</h2>
+              <p className="text-sm text-muted-foreground mb-1">S/O Mohammed Khasim</p>
+              <p className="text-sm text-muted-foreground font-medium">M.Com</p>
               <div className="mt-4 w-56 md:w-64">
                 <TeardropImage src={groomImg} alt="Groom portrait" className="w-full h-auto" />
               </div>
@@ -101,8 +102,9 @@ const Index = () => {
               <div className="w-56 md:w-64">
                 <TeardropImage src={brideImg} alt="Bride portrait" className="w-full h-auto" />
               </div>
-              <h2 className="mt-6 font-script text-[26px] leading-none text-primary">Jenny Wilson</h2>
-              <Socials />
+              <h2 className="mt-6 mb-2 font-script text-[26px] leading-none text-primary">Jenny Wilson</h2>
+              <p className="text-sm text-muted-foreground mb-1">D/O Robert Wilson</p>
+              <p className="text-sm text-muted-foreground font-medium">B.A</p>
             </article>
           </div>
 
