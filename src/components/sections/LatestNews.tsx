@@ -25,24 +25,30 @@ const FloralDivider = () => (
   </svg>
 );
 
-const posts = [
+const ceremonies = [
   {
     id: 1,
     image: coupleImg,
-    alt: "Couple walking hand in hand in the desert",
-    title: "Perfect Photography of wedding.",
+    alt: "Haldi ceremony with turmeric application and bright yellow decorations",
+    title: "Haldi Ceremony",
+    date: "20 Feb 2025",
+    description: "A vibrant celebration where turmeric paste is applied to the bride and groom, symbolizing purification and blessings.",
   },
   {
     id: 2,
     image: brideImg,
-    alt: "Bride holding a golden bracelet during preparation",
-    title: "Best Wedding Gift Idea",
+    alt: "Bride's hands adorned with intricate henna patterns during Mehendi ceremony",
+    title: "Mehendi Night",
+    date: "21 Feb 2025", 
+    description: "The bride's hands adorned with intricate henna patterns, surrounded by music, dance, and joyful laughter.",
   },
   {
     id: 3,
     image: ringImg,
-    alt: "Elegant wedding ring with white orchids",
-    title: "Top 100 Wedding Ring Design",
+    alt: "Traditional Sachak ritual with family members exchanging gifts and blessings",
+    title: "Sachak Ritual",
+    date: "22 Feb 2025",
+    description: "A heartfelt tradition of exchanging gifts, blessings, and love from family members before the wedding.",
   },
 ];
 
@@ -53,12 +59,12 @@ const LatestNews = () => {
     <section aria-labelledby="latest-news-title" className="bg-background">
       <div className="container py-16 md:py-24">
         <header className="text-center mb-10 md:mb-14">
-          <p className="font-display italic text-sm text-muted-foreground">Our Blog</p>
+          <p className="font-display italic text-sm text-muted-foreground">Celebrating traditions with love and joy</p>
           <h2
             id="latest-news-title"
             className="mt-2 font-display text-3xl md:text-4xl tracking-tight"
           >
-            From Our Latest News
+            Our Pre-Wedding Ceremonies
           </h2>
           <div className="mt-4">
             <FloralDivider />
@@ -66,29 +72,23 @@ const LatestNews = () => {
         </header>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-          {posts.map((post) => (
+          {ceremonies.map((ceremony) => (
             <article
-              key={post.id}
+              key={ceremony.id}
               className="rounded-lg border border-border bg-card shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg">
                 <img
-                  src={post.image}
-                  alt={post.alt}
+                  src={ceremony.image}
+                  alt={ceremony.alt}
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="p-5">
-                <h3 className="font-display text-base sm:text-[15px] text-foreground">{post.title}</h3>
-                <a
-                  href="#"
-                  className="mt-3 inline-flex items-center gap-2 text-sm text-accent underline-offset-4 hover:underline"
-                  aria-label={`Read more: ${post.title}`}
-                >
-                  <span> </span>
-                  <ArrowRight size={16} />
-                </a>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{ceremony.title}</h3>
+                <p className="text-sm text-accent font-medium mb-2">{ceremony.date}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{ceremony.description}</p>
               </div>
             </article>
           ))}
