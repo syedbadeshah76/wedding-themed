@@ -32,20 +32,20 @@ const BlessingQuote = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/80" aria-hidden />
       </div>
 
-      <div className="container py-16 md:py-24">
-        <header className="text-center mb-6 md:mb-8">
+      <div className="container px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:py-24">
+        <header className="text-center mb-4 sm:mb-6 md:mb-8">
           <CrescentDivider />
         </header>
 
         <div className="mx-auto max-w-5xl text-center">
           <h2 id="blessing-title" className="sr-only">Wedding Blessing Quote</h2>
-          <blockquote className="font-display text-3xl leading-snug text-foreground md:text-5xl lg:text-6xl">
+          <blockquote className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-snug text-foreground">
             <p>
-              {"Barak Allahu laka wa baraka alaik, wa jama‘a baynakuma fee khayr"}
+              {"Barak Allahu laka wa baraka alaik, wa jama'a baynakuma fee khayr"}
             </p>
           </blockquote>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto italic">
-            “May Allah bless this union with love, mercy, and tranquility, and make it a source of goodness in this life and the next.”
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto italic leading-relaxed">
+            "May Allah bless this union with love, mercy, and tranquility, and make it a source of goodness in this life and the next."
           </p>
         </div>
       </div>

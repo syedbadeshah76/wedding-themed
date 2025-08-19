@@ -44,50 +44,50 @@ const CountdownBanner: React.FC<Props> = ({
   }, [target]);
 
   return (
-    <section aria-labelledby="countdown-title" className="container my-12 md:my-20">
+    <section aria-labelledby="countdown-title" className="container px-4 sm:px-6 my-8 sm:my-12 md:my-16 lg:my-20">
       {/* Decorative top flourish */}
-      <div className="mb-4 flex justify-center" aria-hidden>
-        <svg width="640" height="24" viewBox="0 0 640 24" fill="none">
+      <div className="mb-3 sm:mb-4 flex justify-center" aria-hidden>
+        <svg width="320" height="16" viewBox="0 0 640 24" fill="none" className="sm:w-[480px] sm:h-[20px] md:w-[640px] md:h-[24px]">
           <path d="M5 12 C 60 2, 100 22, 180 12 C 260 2, 300 22, 380 12 C 460 2, 500 22, 635 12" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none"/>
         </svg>
       </div>
 
-      <div className="rounded-2xl border border-accent/50 bg-accent/20 px-6 py-10 md:px-10 md:py-14 text-center">
-        <h2 id="countdown-title" className="flex items-center justify-center gap-3 font-script text-3xl md:text-5xl text-foreground">
+      <div className="rounded-xl sm:rounded-2xl border border-accent/50 bg-accent/20 px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-12 lg:py-14 text-center">
+        <h2 id="countdown-title" className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-script text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-foreground">
           <span>We</span>
-          <Heart size={18} className="text-accent" aria-hidden />
+          <Heart size={16} className="sm:w-[18px] sm:h-[18px] text-accent" aria-hidden />
           <span>Are</span>
-          <Heart size={18} className="text-accent" aria-hidden />
+          <Heart size={16} className="sm:w-[18px] sm:h-[18px] text-accent" aria-hidden />
           <span>Getting</span>
-          <Heart size={18} className="text-accent" aria-hidden />
+          <Heart size={16} className="sm:w-[18px] sm:h-[18px] text-accent" aria-hidden />
           <span>Married</span>
         </h2>
 
-        <p className="mt-3 font-display text-sm md:text-base text-muted-foreground">Date : {dateLabel}</p>
+        <p className="mt-2 sm:mt-3 font-display text-xs sm:text-sm md:text-base text-muted-foreground">Date : {dateLabel}</p>
 
-        <div className="mt-10 grid grid-cols-4 gap-6 md:gap-10">
+        <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-10">
           <div>
-            <div className="font-display text-4xl md:text-5xl text-accent">{timeLeft.days}</div>
-            <div className="mt-1 font-display italic text-sm md:text-base text-muted-foreground">Days</div>
+            <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-accent">{timeLeft.days}</div>
+            <div className="mt-1 font-display italic text-xs sm:text-sm md:text-base text-muted-foreground">Days</div>
           </div>
           <div>
-            <div className="font-display text-4xl md:text-5xl text-accent">{pad(timeLeft.hours)}</div>
-            <div className="mt-1 font-display italic text-sm md:text-base text-muted-foreground">Hours</div>
+            <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-accent">{pad(timeLeft.hours)}</div>
+            <div className="mt-1 font-display italic text-xs sm:text-sm md:text-base text-muted-foreground">Hours</div>
           </div>
           <div>
-            <div className="font-display text-4xl md:text-5xl text-accent">{pad(timeLeft.minutes)}</div>
-            <div className="mt-1 font-display italic text-sm md:text-base text-muted-foreground">Mins</div>
+            <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-accent">{pad(timeLeft.minutes)}</div>
+            <div className="mt-1 font-display italic text-xs sm:text-sm md:text-base text-muted-foreground">Mins</div>
           </div>
           <div>
-            <div className="font-display text-4xl md:text-5xl text-accent">{pad(timeLeft.seconds)}</div>
-            <div className="mt-1 font-display italic text-sm md:text-base text-muted-foreground">Secs</div>
+            <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-accent">{pad(timeLeft.seconds)}</div>
+            <div className="mt-1 font-display italic text-xs sm:text-sm md:text-base text-muted-foreground">Secs</div>
           </div>
         </div>
       </div>
 
       {/* Decorative bottom flourish */}
-      <div className="mt-4 flex justify-center" aria-hidden>
-        <svg width="640" height="24" viewBox="0 0 640 24" fill="none">
+      <div className="mt-3 sm:mt-4 flex justify-center" aria-hidden>
+        <svg width="320" height="16" viewBox="0 0 640 24" fill="none" className="sm:w-[480px] sm:h-[20px] md:w-[640px] md:h-[24px]">
           <path d="M5 12 C 60 22, 100 2, 180 12 C 260 22, 300 2, 380 12 C 460 22, 500 2, 635 12" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none"/>
         </svg>
       </div>

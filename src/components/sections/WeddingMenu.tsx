@@ -47,15 +47,15 @@ const menuItems = [
 
 const WeddingMenu: React.FC = () => {
   return (
-    <section aria-labelledby="menu-title" className="container relative py-16 md:py-24">
+    <section aria-labelledby="menu-title" className="container relative px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:py-24">
       <header className="text-center">
-        <p className="font-display italic text-sm text-muted-foreground">Culinary Delights</p>
-        <h2 id="menu-title" className="mt-1 font-display text-3xl md:text-5xl">Our Wedding Menu</h2>
-        <p className="mt-2 text-muted-foreground">A Feast of Flavors for Our Special Day</p>
+        <p className="font-display italic text-xs sm:text-sm text-muted-foreground">Culinary Delights</p>
+        <h2 id="menu-title" className="mt-1 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Our Wedding Menu</h2>
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground">A Feast of Flavors for Our Special Day</p>
         
         {/* Food decorative pattern */}
-        <div className="mt-4 flex justify-center">
-          <svg width="120" height="30" viewBox="0 0 120 30" fill="none" className="text-accent">
+        <div className="mt-3 sm:mt-4 flex justify-center">
+          <svg width="100" height="25" viewBox="0 0 120 30" fill="none" className="sm:w-[120px] sm:h-[30px] text-accent">
             {/* Fork */}
             <path d="M25 8 L25 22 M22 8 L22 15 M28 8 L28 15" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.6" />
             {/* Plate */}
@@ -67,37 +67,39 @@ const WeddingMenu: React.FC = () => {
         </div>
       </header>
 
-      {/* Center vertical line */}
+      {/* Center vertical line - hidden on mobile */}
       <div
-        className="pointer-events-none absolute left-1/2 top-24 md:top-28 bottom-0 -translate-x-1/2 w-px bg-border"
+        className="pointer-events-none absolute left-1/2 top-20 sm:top-24 md:top-28 bottom-0 -translate-x-1/2 w-px bg-border hidden md:block"
         aria-hidden
       />
 
-      <div className="mt-10 space-y-10 md:space-y-4">
+      <div className="mt-8 sm:mt-10 space-y-8 sm:space-y-10 md:space-y-4">
         {menuItems.map((item, idx) => (
           <article
             key={item.title}
-            className="relative grid items-center gap-8 md:grid-cols-2 md:gap-16 py-10"
+            className="relative grid items-center gap-6 sm:gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 py-6 sm:py-8 md:py-10"
           >
-            {/* Utensils marker */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2" aria-hidden>
-              <div className="grid h-9 w-9 place-items-center rounded-full bg-background ring-2 ring-accent shadow-sm">
-                <Utensils size={16} className="text-accent" />
+            {/* Utensils marker - hidden on mobile */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 hidden md:block" aria-hidden>
+              <div className="grid h-8 w-8 lg:h-9 lg:w-9 place-items-center rounded-full bg-background ring-2 ring-accent shadow-sm">
+                <Utensils size={14} className="lg:w-4 lg:h-4 text-accent" />
               </div>
             </div>
 
             {/* Left column */}
             <div className={item.side === "left" ? "order-1" : "order-2 md:order-1"}>
               {item.side === "left" ? (
-                <ArchImage src={item.image} alt={item.alt} />
+                <div className="w-full max-w-md mx-auto md:max-w-none">
+                  <ArchImage src={item.image} alt={item.alt} />
+                </div>
               ) : (
                 <div className="max-w-xl">
                   <p className="font-display text-xs tracking-wide text-muted-foreground">{item.tagline}</p>
-                  <h3 className="mt-2 font-display text-2xl md:text-4xl leading-tight">{item.title}</h3>
+                  <h3 className="mt-2 font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">{item.title}</h3>
                   
                   {/* Menu highlight box */}
-                  <div className="mt-4 p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
-                    <p className="text-foreground font-medium leading-relaxed">{item.text}</p>
+                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
+                    <p className="text-foreground font-medium leading-relaxed text-sm sm:text-base">{item.text}</p>
                   </div>
                 </div>
               )}
@@ -108,15 +110,17 @@ const WeddingMenu: React.FC = () => {
               {item.side === "left" ? (
                 <div className="max-w-xl md:ml-auto">
                   <p className="font-display text-xs tracking-wide text-muted-foreground">{item.tagline}</p>
-                  <h3 className="mt-2 font-display text-2xl md:text-4xl leading-tight">{item.title}</h3>
+                  <h3 className="mt-2 font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">{item.title}</h3>
                   
                   {/* Menu highlight box */}
-                  <div className="mt-4 p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
-                    <p className="text-foreground font-medium leading-relaxed">{item.text}</p>
+                  <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
+                    <p className="text-foreground font-medium leading-relaxed text-sm sm:text-base">{item.text}</p>
                   </div>
                 </div>
               ) : (
-                <ArchImage src={item.image} alt={item.alt} />
+                <div className="w-full max-w-md mx-auto md:max-w-none">
+                  <ArchImage src={item.image} alt={item.alt} />
+                </div>
               )}
             </div>
           </article>

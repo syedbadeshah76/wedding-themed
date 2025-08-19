@@ -85,15 +85,15 @@ const WhenWhere: React.FC = () => {
   };
 
   return (
-    <section id="when-and-where" aria-labelledby="when-where-title" className="container py-16 md:py-24">
+    <section id="when-and-where" aria-labelledby="when-where-title" className="container px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:py-24">
       <header className="text-center">
-        <p className="font-display italic text-sm text-muted-foreground">Our Wedding</p>
-        <h2 id="when-where-title" className="mt-2 font-display text-3xl md:text-4xl">When & Where</h2>
+        <p className="font-display italic text-xs sm:text-sm text-muted-foreground">Our Wedding</p>
+        <h2 id="when-where-title" className="mt-2 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl">When & Where</h2>
         <FloralDivider />
       </header>
 
       <div
-        className="relative mt-8 md:mt-12"
+        className="relative mt-6 sm:mt-8 md:mt-12"
         role="region"
         aria-roledescription="carousel"
         aria-label="Event details carousel"
@@ -101,7 +101,7 @@ const WhenWhere: React.FC = () => {
         onKeyDown={onKeyDown}
       >
         {/* Desktop arrows */}
-        <div className="pointer-events-none absolute inset-y-0 left-2 right-2 hidden items-center justify-between md:flex">
+        <div className="pointer-events-none absolute inset-y-0 left-2 right-2 hidden items-center justify-between lg:flex">
           <div className="pointer-events-auto">
             <ArrowButton direction="left" onClick={scrollPrev} ariaLabel="Previous event" />
           </div>
@@ -113,7 +113,7 @@ const WhenWhere: React.FC = () => {
         {/* Main content area */}
         <div className="grid overflow-hidden rounded-lg border border-border bg-background md:grid-cols-[1.2fr_1fr]">
           {/* Left: Image */}
-          <div className="relative h-56 w-full md:h-[420px]">
+          <div className="relative h-48 w-full sm:h-56 md:h-[380px] lg:h-[420px]">
             <img
               key={event.key}
               src={media.src}
@@ -124,20 +124,20 @@ const WhenWhere: React.FC = () => {
           </div>
 
           {/* Right: Card */}
-          <div className="p-4 md:p-0 md:flex md:items-center">
-            <Card className="mx-auto w-full max-w-[520px] rounded-xl border-border bg-card/95 p-6 shadow-sm md:mr-6 md:p-8">
+          <div className="p-3 sm:p-4 md:p-0 md:flex md:items-center">
+            <Card className="mx-auto w-full max-w-[520px] rounded-xl border-border bg-card/95 p-4 sm:p-6 shadow-sm md:mr-6 md:p-8">
               <div key={event.key} className="animate-enter" aria-live="polite">
-                <h3 className="font-display text-xl text-foreground md:text-2xl">{event.title}</h3>
+                <h3 className="font-display text-lg sm:text-xl text-foreground md:text-2xl">{event.title}</h3>
                 <span className="mt-2 block h-0.5 w-12 rounded-full bg-accent" />
 
-                <div className="mt-5 space-y-3 font-display text-sm text-muted-foreground md:text-base">
+                <div className="mt-4 sm:mt-5 space-y-2 sm:space-y-3 font-display text-xs sm:text-sm text-muted-foreground md:text-base">
                   <p>{event.datetime}</p>
                   <p>{event.address}</p>
                   <p>{event.phone}</p>
                 </div>
 
-                <div className="mt-6">
-                  <a href="#" className="text-accent underline-offset-4 hover:underline">See Location</a>
+                <div className="mt-4 sm:mt-6">
+                  <a href="#" className="text-sm sm:text-base text-accent underline-offset-4 hover:underline">See Location</a>
                 </div>
               </div>
             </Card>
@@ -145,7 +145,7 @@ const WhenWhere: React.FC = () => {
         </div>
 
         {/* Mobile arrows */}
-        <div className="mt-4 flex items-center justify-center gap-3 md:hidden">
+        <div className="mt-4 flex items-center justify-center gap-3 lg:hidden">
           <ArrowButton direction="left" onClick={scrollPrev} ariaLabel="Previous event" />
           <ArrowButton direction="right" onClick={scrollNext} ariaLabel="Next event" />
         </div>

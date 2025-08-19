@@ -11,7 +11,7 @@ import LatestNews from "@/components/sections/LatestNews";
 import WeddingMenu from "@/components/sections/WeddingMenu";
 import BlessingQuote from "@/components/sections/BlessingQuote";
 const Nav = () => (
-  <header className="w-full relative overflow-hidden py-8 md:py-12">
+  <header className="w-full relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-12">
     {/* Decorative background pattern */}
     <div className="absolute inset-0 opacity-5">
       <svg width="100%" height="100%" viewBox="0 0 800 200" fill="none" className="w-full h-full">
@@ -20,31 +20,31 @@ const Nav = () => (
       </svg>
     </div>
     
-    <div className="container relative z-10">
+    <div className="container relative z-10 px-4 sm:px-6">
       <div className="text-center">
         {/* Decorative hearts */}
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <Heart size={16} className="text-accent animate-pulse" fill="hsl(var(--accent))" />
-          <svg width="40" height="20" viewBox="0 0 40 20" fill="none" className="text-accent">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-3 sm:mb-4">
+          <Heart size={14} className="sm:w-4 sm:h-4 text-accent animate-pulse" fill="hsl(var(--accent))" />
+          <svg width="30" height="15" viewBox="0 0 40 20" fill="none" className="sm:w-10 sm:h-5 text-accent">
             <path d="M5 10 Q12 5 20 10 Q28 5 35 10" stroke="currentColor" strokeWidth="1.5" fill="none"/>
             <circle cx="20" cy="10" r="2" fill="currentColor" opacity="0.6"/>
           </svg>
-          <Heart size={16} className="text-accent animate-pulse" fill="hsl(var(--accent))" />
+          <Heart size={14} className="sm:w-4 sm:h-4 text-accent animate-pulse" fill="hsl(var(--accent))" />
         </div>
 
         {/* Main heading with bismillah */}
-        <div className="space-y-2">
-          <h1 className="font-script text-3xl md:text-5xl text-primary leading-relaxed">
+        <div className="space-y-1 sm:space-y-2">
+          <h1 className="font-script text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary leading-relaxed">
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
           </h1>
-          <p className="font-display text-sm md:text-base text-muted-foreground tracking-[0.2em] uppercase">
+          <p className="font-display text-xs sm:text-sm md:text-base text-muted-foreground tracking-[0.1em] sm:tracking-[0.2em] uppercase">
             Wedding Ceremony
           </p>
         </div>
 
         {/* Decorative flourish */}
-        <div className="mt-6 flex justify-center">
-          <svg width="200" height="40" viewBox="0 0 200 40" fill="none" className="text-accent">
+        <div className="mt-4 sm:mt-6 flex justify-center">
+          <svg width="150" height="30" viewBox="0 0 200 40" fill="none" className="sm:w-[200px] sm:h-10 text-accent">
             {/* Main curve */}
             <path d="M10 20 Q50 10 100 20 Q150 10 190 20" stroke="currentColor" strokeWidth="1.5" fill="none"/>
             {/* Center ornament */}
@@ -79,39 +79,39 @@ const Index = () => {
         {/* SEO: Single H1 kept for semantics */}
         <h1 className="sr-only">Elegant Wedding Portfolio Hero</h1>
 
-        <section className="container py-12 md:py-20">
-          <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-3 md:gap-12">
+        <section className="container px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20">
+          <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
             {/* Left: Groom */}
-            <article className="flex flex-col items-center text-center">
-              <h2 className="mb-2 font-script text-[26px] leading-none text-primary">Albert Flores</h2>
-              <p className="text-sm text-muted-foreground mb-1">S/O Mohammed Khasim</p>
-              <p className="text-sm text-muted-foreground font-medium">M.Com</p>
-              <div className="mt-4 w-56 md:w-64">
+            <article className="flex flex-col items-center text-center order-1 md:order-1">
+              <h2 className="mb-2 font-script text-xl sm:text-2xl md:text-[24px] lg:text-[26px] leading-none text-primary">Albert Flores</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-1">S/O Mohammed Khasim</p>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium">M.Com</p>
+              <div className="mt-3 sm:mt-4 w-40 sm:w-48 md:w-56 lg:w-64">
                 <TeardropImage src={groomImg} alt="Groom portrait" className="w-full h-auto" />
               </div>
             </article>
 
             {/* Center: Couple with oval and double outline */}
-            <article className="flex flex-col items-center">
-              <div className="w-[24rem] md:w-[32rem]">
+            <article className="flex flex-col items-center order-3 md:order-2">
+              <div className="w-80 sm:w-96 md:w-[24rem] lg:w-[32rem]">
                 <OvalImage src={coupleImg} alt="Bride and groom embracing" className="w-full h-auto" />
               </div>
             </article>
 
             {/* Right: Bride */}
-            <article className="flex flex-col items-center text-center">
-              <div className="w-56 md:w-64">
+            <article className="flex flex-col items-center text-center order-2 md:order-3">
+              <div className="w-40 sm:w-48 md:w-56 lg:w-64">
                 <TeardropImage src={brideImg} alt="Bride portrait" className="w-full h-auto" />
               </div>
-              <h2 className="mt-6 mb-2 font-script text-[26px] leading-none text-primary">Jenny Wilson</h2>
-              <p className="text-sm text-muted-foreground mb-1">D/O Robert Wilson</p>
-              <p className="text-sm text-muted-foreground font-medium">B.A</p>
+              <h2 className="mt-4 sm:mt-6 mb-2 font-script text-xl sm:text-2xl md:text-[24px] lg:text-[26px] leading-none text-primary">Jenny Wilson</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-1">D/O Robert Wilson</p>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium">B.A</p>
             </article>
           </div>
 
           {/* Decorative divider with wedding-style swirl */}
-          <div className="mt-14 flex justify-center">
-            <svg width="420" height="60" viewBox="0 0 420 60" fill="none" aria-hidden>
+          <div className="mt-10 sm:mt-12 md:mt-14 flex justify-center">
+            <svg width="280" height="40" viewBox="0 0 420 60" fill="none" aria-hidden className="sm:w-[350px] sm:h-[50px] md:w-[420px] md:h-[60px]">
               <path d="M5 30 C 80 10, 120 50, 210 30 C 300 10, 340 50, 415 30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none"/>
               <path d="M210 30 c -20 -10 -20 -30 0 -40 c 20 10 20 30 0 40 Z" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none"/>
             </svg>
