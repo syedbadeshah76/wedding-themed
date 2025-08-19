@@ -8,6 +8,7 @@ import CountdownBanner from "@/components/sections/CountdownBanner";
 import StoryTimeline from "@/components/sections/StoryTimeline";
 import WhenWhere from "@/components/sections/WhenWhere";
 import LatestNews from "@/components/sections/LatestNews";
+import WeddingMenu from "@/components/sections/WeddingMenu";
 import BlessingQuote from "@/components/sections/BlessingQuote";
 const Nav = () => (
   <header className="w-full relative overflow-hidden py-8 md:py-12">
@@ -125,6 +126,8 @@ const Index = () => {
         <WhenWhere />
         {/* From Our Latest News Section */}
         <LatestNews />
+        {/* Wedding Menu Section */}
+        <WeddingMenu />
         {/* Blessing Quote Section */}
         <BlessingQuote />
       </main>
